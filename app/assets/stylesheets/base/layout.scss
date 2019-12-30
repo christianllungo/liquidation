@@ -1,0 +1,105 @@
+html{
+    color: $dark-font;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.5em;
+}
+
+h1{
+    font-size: 2em;
+    //text-align: center;
+    //padding: 50px;
+    //font-style: italic;
+}
+
+input[type="password"],
+input[type="text"]{
+    border-bottom: 1px solid $light-dark-font;
+    width: 100%;
+}
+
+textarea{
+    border: 1px solid $light-dark-font;
+    border-radius: 5px;
+    width: 100%;
+    padding: 1px;
+}
+
+select{
+    width: 100%;
+    padding: 5px;
+    font-size: 0.8em;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+
+.liq-form{
+    //text-align: center;
+    box-sizing: border-box;
+    padding: 80px 50px 40px;
+    border-radius: 10px;
+    width: 360px;
+    margin: 80px auto 5px;
+    //position: absolute;
+    //top: 50%;
+    //left: 50%;
+    //transform: translate(-50%, -50%);
+    /* Shadow 2dp */
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
+}
+
+.liq-form h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.liq-form input{
+    margin-bottom: 30px;
+}
+
+.liq-form ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    //font-size: 0.9em;
+}
+
+.liq-form ul a{
+    text-decoration: underline;
+    color: $color-secondary-2-1;
+}
+
+.liq-button{
+    color: rgba(255, 255, 255, 0.9);
+    background: $color-primary-2;
+    padding: 0.4em 2.5em;
+    border-radius: 5px;
+    font-size: 1.1em;
+    display: block;
+    /* top, right-left, bottom */
+    margin: 40px auto 0;
+}
+
+.liq-button:hover{
+    background: $color-primary-3;
+    color: white;
+}
+
+label{
+    font-size: 1.1em;
+}
+
+h2{
+    font-size: 1.4em;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    //color: $color-secondary-1-3;
+}
+
+hr{
+    //border-top: 1px solid $color-primary-0;
+}

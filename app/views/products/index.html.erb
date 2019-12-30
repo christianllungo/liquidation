@@ -1,0 +1,55 @@
+
+<header class="secundary-nav">
+    <nav>
+        <ul>
+            <li>
+                <select>
+                    <option disabled selected>-- Category --</option>
+                    <option value="Automotive">Automotive</option>
+                    <option value="Books">Books</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Handmade">Handmade</option>
+                    <option value="Home">Home</option>
+                    <option value="Outdoors">Outdoors</option>
+                    <option value="Tools">Tools</option>
+                    <option value="Games">Games</option>
+                    <option value="Clothing">Clothing</option>
+                </select>
+            </li>
+            <li>
+                <select>
+                    <option disabled selected>-- Price range --</option>
+                    <option value="low">0-$10</option>
+                    <option value="Books">$10-$50</option>
+                    <option value="Electronics">$50-$200</option>
+                    <option value="Handmade">$200-$1000</option>
+                    <option value="Home">$1000-$4000</option>
+                    <option value="Outdoors">$4000-$10000</option>
+                    <option value="Tools">$10000-$50000</option>
+                </select>
+            </li>
+            <li>
+                <input type="text" placeholder="Search ..." name="" id="">
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="card-wrapper">
+    <% @products.each do |product| %>
+        <div class="card">
+            <a href="<%= product_url(product) %>">
+                <img class="card-image" src="https://picsum.photos/200/300" alt="">
+                <div class="card-body">
+                    <div class="card-body-title"><%= product.name %></div>
+                    <div class="card-body-price">$ <%= product.price %></div>
+                    <ul class="card-body-options">
+                        <li><i class="far fa-heart"></i></li>
+                        <li><i class="fas fa-phone"></i></li>
+                        <li><i class="fas fa-ellipsis-v"></i></li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+    <% end %>
+</div>

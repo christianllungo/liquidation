@@ -1,0 +1,18 @@
+.user-show-ul-flex{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.user-show-ul-flex > li{
+    padding-right: 10px;
+}
+
+.user-show-ul-flex > li:last-child{
+    padding-top: 4px;
+}
+
+.profile-pic{
+    border: 1px solid $dark-font;
+    border-radius: 50%;
+    width: 75%;
+}

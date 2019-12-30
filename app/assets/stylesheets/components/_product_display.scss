@@ -1,0 +1,35 @@
+.image-show{
+    border: 1px solid $dark-font;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.liq-product-display-description > ul:first-of-type > li:first-of-type{
+    font-size: 1.5em;
+    padding: 15px 0 30px;
+}
+
+.liq-product-display-description > ul:nth-of-type(2){
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.liq-product-display-description > ul > li{
+    flex: 0 50%;
+    padding: 5px 0;
+}
+
+.section{
+    margin: 50px 0;
+}
+
+/* icon color */
+.liq-product-display-description > ul:nth-of-type(2) > li:nth-of-type(1) i{
+    color: $color-primary-1;
+}
+.liq-product-display-description > ul:nth-of-type(2) > li:nth-of-type(2) i{
+    color: $color-secondary-2-0;
+}
+.liq-product-display-description > ul:nth-of-type(2) > li:nth-of-type(4) i{
+    color: $color-secondary-2-3;
+}

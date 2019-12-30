@@ -1,0 +1,76 @@
+
+<div class="section group">
+    <div class="col span_4_of_12">
+        <img class="profile-pic" src="https://picsum.photos/100" alt="">
+    </div>
+    <div class="col span_4_of_12">
+        <ul class="user-show-ul-flex">
+            <li><h2>My account </h2></li>
+            <li><a href="<%= edit_user_url(current_user) %>">Edit</a></li>
+        </ul>
+        <ul>
+            <li>Logged in as: <%=current_user.username %></li>
+            <li>Email: <%=current_user.email %></li>
+            <li>Phone Number: <%=current_user.phone_number %></li>
+        </ul>
+    </div>
+</div>
+
+<ul class="user-show-ul-flex">
+    <li><h2>My products </h2></li>
+    <li><a href="<%= new_product_url %>"> New</a></li>
+</ul>
+
+<div class="card-wrapper">
+    <% current_user.products.each do |product| %>
+        <div class="card">
+            <a href="<%= product_url(product) %>">
+                <img class="card-image" src="https://picsum.photos/200/300" alt="">
+            </a>
+            <div class="card-body">
+                <div class="card-body-title"><%= product.name %></div>
+                <div class="card-body-price">$<%= product.price %></div>
+                <ul class="card-body-options">
+                    <li><a href="<%= edit_product_url(product) %>">Edit</a></li>
+                    <li>
+                        <form action="<%= product_url(product) %>" method="POST">
+                            <input type="hidden"
+                                    name="authenticity_token"
+                                    value="<%= form_authenticity_token %>">
+                            <input type="hidden" value="delete" name="_method" />
+                            <input type="submit" value="Delete" />
+                        </form>   
+                    </li>
+                    <li><i class="far fa-heart"></i></li>
+                    <li><i class="fas fa-phone"></i></li>
+                    <li><i class="fas fa-ellipsis-v"></i></li>
+                </ul>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<hr>
+<br>
+<br>
+
+<h2>My wish list</h2>
+
+<div class="card-wrapper">
+    <% current_user.products.each do |product| %>
+        <div class="card">
+            <a href="<%= product_url(product) %>">
+                <img class="card-image" src="https://picsum.photos/200/300" alt="">
+            </a>
+            <div class="card-body">
+                <div class="card-body-title"><%= product.name %></div>
+                <div class="card-body-price">$<%= product.price %></div>
+                <ul class="card-body-options">
+                    <li><i class="far fa-heart"></i></li>
+                    <li><i class="fas fa-phone"></i></li>
+                    <li><i class="fas fa-ellipsis-v"></i></li>
+                </ul>
+            </div>
+        </div>
+    <% end %>
+</div>

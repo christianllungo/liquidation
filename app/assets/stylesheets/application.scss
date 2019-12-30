@@ -1,0 +1,107 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *
+ *= require_self
+ */
+
+ // CSS Reset
+@import "base/reset.scss";
+
+// Core
+@import "base/colors.scss";
+@import "base/fonts.scss";
+@import "base/layout.scss";
+
+// Grid
+@import "base/grid.scss";
+
+// Components
+@import "components/*";
+
+
+/*
+html, body, section, article, h1, h2, p, nav, main, figure {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    background: transparent;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    text-align: center;
+    font-size: 24px;
+}
+
+.header{
+    background: #00BCD4;
+}
+.header-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.header-nav-logo{
+   flex: 1;
+}
+.header-nav-search{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.header-nav-options{
+   flex: 1;
+   display: flex;
+   justify-content: flex-end;
+   padding-right: 1em;
+}
+.header-nav-options>*{
+    padding-right: 1em;
+}
+.product-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+.product-container-box{
+    text-align: center;
+    margin-bottom: 2em;
+}
+.liq-button{
+    color: white;
+    background: #0097A7;
+    padding: 1em;
+}
+.liq-form{
+    text-align: center;
+}
+.liq-form>*{
+    margin-top: 1em;
+}
+.product-show-container{
+    text-align: center;
+    margin-top: 1em;
+}
+*/

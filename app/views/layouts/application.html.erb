@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liquidation</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">  
+    <script src="https://kit.fontawesome.com/bc74374db4.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header class="main-nav">
+
+      <nav class="left-nav">
+        <ul>
+          <li><a href="<%= products_url %>">Liquidation</a></li>
+        </ul>
+      </nav>
+
+      <nav class="right-nav">
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">About</a></li>
+          <% if !current_user.nil? %>
+              <li>
+                <i class="fas fa-user-circle"></i> 
+                <a href="<%= user_url(current_user) %>"><%= current_user.username %></a>
+              </li>
+              <li>
+                <form action="<%= session_url %>" method="POST">
+                  <input type="hidden"
+                        name="authenticity_token"
+                        value="<%= form_authenticity_token %>">
+                  <input type="hidden" value="delete" name="_method" />
+                  <input type="submit" value="Logout" />
+                </form>
+              </li>
+          <% else %>
+              <li><a href="<%= new_session_url %>">Log in</a></li>
+              <li><a href="<%= new_user_url %>">Sign up</a></li>
+          <% end %>
+        </ul>
+      </nav>
+
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>
+
+<!--
+<div class="header-nav-search">
+  <input type="text" name="" placeholder="type to search">
+  <div><a href="#">search</a></div>
+</div>
+-->

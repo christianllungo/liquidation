@@ -1,0 +1,49 @@
+
+<form class="liq-form" action="<%= users_url %>" method="post">
+  <h1>Sign up</h1>
+  <input
+     name="_method"
+     type="hidden"
+     value="post">
+  <input
+     name="authenticity_token"
+     type="hidden"
+     value="<%= form_authenticity_token %>">
+
+  <label for="user_username">Username</label>
+  <input
+     id="user_username"
+     name="user[username]"
+     type="text" 
+     placeholder="Enter username">
+  <br>
+
+  <label for="user_password">Password</label>
+  <input
+     id="user_password"
+     name="user[password]"
+     type="password"
+     placeholder="Enter password">
+  <br>
+
+  <label for="user_email">Email</label>
+  <input
+     id="user_email"
+     name="user[email]"
+     type="text"
+     placeholder="Enter email">
+  <br>
+
+  <label for="user_phone_number">Phone Number</label>
+  <input
+     id="user_phone_number"
+     name="user[phone_number]"
+     type="text"
+     placeholder="Enter contact number">
+  <br>
+
+    <ul>
+        <li>Agreed to all <a href="#">Terms and conditions</a></li>
+    </ul>
+  <input class="liq-button" type="submit" value="Sign up">
+</form>

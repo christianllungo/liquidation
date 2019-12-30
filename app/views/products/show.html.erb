@@ -1,0 +1,56 @@
+
+<div class="section group">
+    <div class="col span_6_of_12">
+        <div><img src="https://picsum.photos/500" alt="" class="image-show"></div>
+    </div>
+
+    <div class="col span_6_of_12 liq-product-display-description">
+        <h2><%= @product.name %></h2>
+        <ul>
+            <li>$ <%= @product.price %></li>
+            <li>Category: <%= @product.category %></li>
+            <li>Seller: <%= @product.user.username %></li>
+        </ul>
+        <br>
+        <br>
+        <hr>
+        <ul>
+            <li><i class="fas fa-phone"></i> <%= @product.user.phone_number %></li>
+            <li><i class="far fa-heart"></i> Add to likes</li>
+            <li><i class="far fa-square"></i> Another option</li>
+            <li><i class="far fa-flag"></i> Report</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section group">
+    <div class="col span_6_of_12">
+        <h2>Description</h2>
+        <div><%= @product.description %></div>
+    </div>
+</div>
+
+<hr>
+<br>
+<br>
+
+<h2>Related products</h2>
+
+<div class="card-wrapper">
+    <% 3.times do %>
+        <div class="card">
+            <a href="<%= product_url(@product) %>">
+                <img class="card-image" src="https://picsum.photos/200/300" alt="">
+                <div class="card-body">
+                    <div class="card-body-title"><%= @product.name %></div>
+                    <div class="card-body-price">$ <%= @product.price %></div>
+                    <ul class="card-body-options">
+                        <li><i class="far fa-heart"></i></li>
+                        <li><i class="fas fa-phone"></i></li>
+                        <li><i class="fas fa-ellipsis-v"></i></li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+    <% end %>
+</div>

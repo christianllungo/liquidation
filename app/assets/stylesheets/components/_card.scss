@@ -1,0 +1,49 @@
+.card-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card{
+    /* Shadow 4dp */
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+    padding: 1px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card-image{
+    
+}
+
+.card-body{
+    padding: 10px;
+}
+
+.card-body-title{
+    padding-bottom: 2px;
+}
+
+.card-body-price{
+    font-size: 1.2em;
+    //font-weight: 600;
+    //color: $color-secondary-2-4;
+}
+
+.card-body-options{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1em;
+}
+
+.card-body-options > li{
+    padding: 2px 5px;
+}
+
+.card-body-options > li:nth-last-child(2){
+    color: $color-primary-0;
+}
+
+.card-body-options > li:nth-last-child(3){
+    color: $color-secondary-2-0;
+}

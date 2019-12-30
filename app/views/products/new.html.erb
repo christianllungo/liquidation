@@ -1,0 +1,34 @@
+
+<form class="liq-form" action="/products" method="post">
+    <h1>Create new offer</h1>
+    <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+    <label for="name">Name</label>
+    <input id="name" type="text" name="product[name]" placeholder="Name">
+    <br>
+    <label for="category">Category</label>
+    <select name="product[category]" id="category">
+        <option disabled selected>-- Select a category --</option>
+        <option value="Automotive">Automotive</option>
+        <option value="Books">Books</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Handmade">Handmade</option>
+        <option value="Home">Home</option>
+        <option value="Outdoors">Outdoors</option>
+        <option value="Tools">Tools</option>
+        <option value="Games">Games</option>
+        <option value="Clothing">Clothing</option>
+    </select>
+    <br>
+    <label for="price">Price</label>
+    <input type="text" name="product[price]" id="price" placeholder="Name">
+    <br>
+    <label for="description">Description</label>
+    <textarea name="product[description]" id="description" rows="5" placeholder="Add a description..."></textarea>
+    <br>
+    <input class="liq-button" type="submit" value="create offer">
+
+</form>
