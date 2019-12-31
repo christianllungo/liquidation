@@ -1,24 +1,13 @@
-# README
+# Liquidation Site
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A marketplace web app idea on initial stages
 
-Things you may want to cover:
+* ruby '2.5.1'
 
-* Ruby version
+## Demo screenshots
 
-* System dependencies
+![image1](app/assets/images/github-image1.png)
 
-* Configuration
+![image1](app/assets/images/github-image2.png)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![image1](app/assets/images/github-image3.png)
